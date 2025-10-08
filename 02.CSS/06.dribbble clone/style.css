@@ -92,7 +92,8 @@ html, body {
 }
 #hero #part1 #part11 #part111 p{
     margin-top: 10px;
-    font-size: 17px;
+    line-height: 1.4;
+    font-size: 16px;
 }
 #hero #part1 #part11 #part112{
     width: 100%;
@@ -200,7 +201,7 @@ html, body {
 #hero #part2 #ai{
     background-color: transparent;
     outline: none;
-    border: 1px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.112);
     border-radius: 50px;
     padding: 1vw 1.7vw 1vw 1vw;
     font-size: 16px;
@@ -210,6 +211,10 @@ html, body {
     gap: 10px;
     position: relative;
 
+}
+#hero #part2 p{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.697);
 }
 #hero #part2 #new{
     font-size: 10px;
