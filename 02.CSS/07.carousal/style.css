@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+}
+#carousal{
+    height: 70%;
+    min-width: 100vw;
+    /* background-color: red; */
+    /* padding-left: 3vw; */
+    padding: 5vh 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    gap: 5vw;
+    /* border: 2px solid black; */
+
+}
+#carousal::-webkit-scrollbar{
+    /* display: none; */
+    /* display: none; */
+    height: 8px;
+}
+#carousal::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 0, 0, 0.673);
+    cursor:grab;
+    border-radius: 100px;
+}
+.card{
+    height: 100%;
+    width: 360px;
+    flex-shrink: 0;
+    
+    /* 
+    
+    position: relative; */
+    /* border: 1px solid black; */
+}
+#part1{
+    height: 15%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    /* border: 1px solid black; */
+}
+#part1 img{
+    height: 35px;
+}
+#part2{
+    height: 85%;
+    background-image: url(https://media.gettyimages.com/id/2160503802/photo/lewis-hamilton-of-great-britain-and-mercedes-amg-petronas-f1-is-kissing-the-winners-trophy-on.jpg?s=612x612&w=0&k=20&c=HwMz6I6XKbm_568A2YfyYsHh-y3eXNZnm_b3JTKH4eI=);
+    background-size: cover;
+    background-position: 0 70%;
+    position: relative;
+}
+#two #part2{
+    height: 85%;
+    background-image: url(https://ca-times.brightspotcdn.com/dims4/default/5f225d4/2147483647/strip/false/crop/5700x3800+0+0/resize/1486x991!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F14%2Fa8%2F8bfa1d244d598b5e2c4aceb15c47%2Ff1-84694.jpg);
+    background-size: cover;
+    background-position: 0 70%;
+    position: relative;
+}
+#three #part2{
+    height: 85%;
+    background-image: url(https://indiainf1.com/wp-content/uploads/2024/07/George-Russell-take-surprise-win-ahead-of-Hamilton-28Jul24-DPPIpic.jpg);
+    background-size: cover;
+    background-position: 0 70%;
+    position: relative;
+}
+#four #part2{
+    height: 85%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1KruiTe5sHdrXN98-LVdkHA2YFUCD8TKheQ&s);
+    background-size: cover;
+    background-position: 0 70%;
+    position: relative;
+}
+#five #part2{
+    height: 85%;
+    background-image: url(https://media.gq.com/photos/61bf6d63cae8da05dff00dbf/master/w_1600%2Cc_limit/image.png);
+    background-size: cover;
+    background-position: 0 70%;
+    position: relative;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(193, 85, 22, 0.504);
+    /* padding: 20px 20px; */
+    color: white;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 22px 0;
+
+}
+#two .overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(193, 22, 22, 0.592);
+    /* padding: 20px 20px; */
+    color: white;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 22px 0;
+
+}
+#three .overlay{
+    background-color: #00938e85;
+}
+#four .overlay{
+    background-color: #00938e85;
+}
+#five .overlay{
+    background-color: rgba(0, 0, 0, 0.441);
+}
+.overlay h3{
+    font-size: 10px;
+}
+.overlay h2#solid{
+    color: white    ;
+}
+.overlay h2{
+    font-size: 3.2vw;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-weight: 900;
+}
+#four .overlay h2{
+    font-size: 3vw;
+}
+#five .overlay h2{
+    font-size: 2.5vw;
+}
+.overlay img{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 110% ;
+    transform: translate(-50%);
+}
+#three .overlay img{
+    bottom: 0;
+    height: 120% ;
+}
+#four .overlay img{
+    bottom: 0;
+    height: 135% ;
+}
+#five .overlay img{
+    bottom: 0;
+    height: 115% ;
+}
+#five #logo{
+    height: 65px ;
+}
+.overlay img#car{
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    height: 75% ;
+    transform: translate(-50%);
+}
+#two .overlay img#car{
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    height: 82.5% ;
+    transform: translate(-50%);
+}
+#three .overlay img#car{
+    position: absolute;
+    left: 50%;
+    bottom: -13%;
+    height: 70% ;
+    transform: translate(-50%);
+}
+#four .overlay img#car{
+    position: absolute;
+    left: 50%;
+    bottom: -17%;
+    height: 72% ;
+    transform: translate(-50%);
+}
+#five .overlay img#car{
+    position: absolute;
+    left: 50%;
+    bottom: -18%;
+    height: 72% ;
+    transform: translate(-50%);
+}
