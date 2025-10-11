@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main section {
+  height: 75%;
+  width: 65%;
+  background-color: beige;
+  display: flex;
+  gap: 15px;
+}
+#main section div {
+  height: 100%;
+  flex-grow: 1;
+  transition: all 0.2s linear 0s;
+}
+#main section div:hover {
+  flex-grow: 2;
+}
+#main section div:nth-child(1) {
+  background-image: url(https://i.pinimg.com/736x/77/0f/94/770f9422fbc32d5ceb6da9900d4aab16.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 35px;
+  cursor: pointer;
+}
+#main section div:nth-child(2) {
+  background-image: url(https://i.pinimg.com/736x/db/07/1b/db071b823508371d69de8e32ead9d8d4.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 35px;
+  cursor: pointer;
+}
+#main section div:nth-child(3) {
+  background-image: url(https://i.pinimg.com/736x/c8/95/da/c895dacec0195f88145f7d0987d94df4.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 35px;
+  cursor: pointer;
+}
+#main section div:nth-child(4) {
+  background-image: url(https://i.pinimg.com/736x/00/a6/95/00a695dfa087a11253e8dbe0847d1a96.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 35px;
+  cursor: pointer;
+}
+#main section div:nth-child(5) {
+  background-image: url(https://i.pinimg.com/736x/5a/22/4b/5a224bac5a11db1c77e884d27c21f8ee.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 35px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     font-family: "Rubik", sans-serif;
+     /* font-weight: ; */
 }
 html, body {
     height: 100%;
     width: 100%;
+}
+#main{
+
+}
+#nav{
+    height: 80px ;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+}
+#nav div{
+    display: flex;
+    gap: 40px;
+}
+#nav div h4{
+    font-weight: 300;
+}
+#nav img{
+    height: 35px;
+}
+#nav button{
+    padding: 15px 25px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: #0161FE;
+    color: white;
+    border-radius: 100px    ;
+}
+#jumbotron{
+    padding: 0 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+#jumbotron>div{
+    width: 55%;
+}
+#jumbotron div p{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.649);
+}
+#jumbotron div div button{
+    padding: 15px 25px;
+    outline: none;
+    font-size: 16px;
 }
