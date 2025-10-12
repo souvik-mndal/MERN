@@ -108,7 +108,7 @@ html, body {
 #main #body #id1 h1 div {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 30px;
 }
 #main #body #id1 h1 div:nth-child(5) {
   margin-top: 25px;
