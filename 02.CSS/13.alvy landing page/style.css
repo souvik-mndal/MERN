@@ -1,0 +1,89 @@
+@font-face {
+  font-family: satoshi;
+  src: url(./63cffc20aa8997095067596f_Satoshi-Light.woff);
+}
+@font-face {
+  font-family: mono;
+  src: url(./63cffc20aa8997095067596f_Satoshi-Light.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: satoshi;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+#nav-bar {
+  height: 80px;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: white;
+}
+#nav-bar #part1 {
+  font-size: 18px;
+}
+#nav-bar #part2 {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+}
+#nav-bar #part2 .two {
+  border-radius: 15px;
+  background-color: #232323;
+  padding: 15px 22px;
+  font-size: 14px;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+}
+#nav-bar #part2 #part25 i {
+  padding-left: 5px;
+}
+#nav-bar #part2 #part26 span {
+  padding: 5px 8px;
+  border-radius: 50%;
+  background-color: #AD9D49;
+  font-size: 12px;
+  margin-left: 5px;
+  color: black;
+}
+#nav-bar #part2 #part27 {
+  background-color: #AD9D49;
+  color: black;
+}
+
+#one-main {
+  height: 100vh;
+  background-color: #121212;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#one-main .o-main {
+  width: 50%;
+  height: 100%;
+}
+#one-main #part1 {
+  border-radius: 15px;
+  overflow: hidden;
+}
+#one-main #part1 #part1 img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
