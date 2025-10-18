@@ -11,79 +11,1026 @@
   padding: 0;
   box-sizing: border-box;
   font-family: satoshi;
+  color: white;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 #main {
-  height: 100%;
   width: 100%;
+  background-color: #121212;
+  margin: auto;
 }
 
-#nav-bar {
-  height: 80px;
-  background-color: #121212;
+section {
+  max-width: 1920px;
+  margin: auto;
+}
+
+#navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  color: white;
-}
-#nav-bar #part1 {
-  font-size: 18px;
-}
-#nav-bar #part2 {
-  display: flex;
-  gap: 10px;
+  padding: 17px 15px 17px 35px;
   text-transform: uppercase;
 }
-#nav-bar #part2 .two {
-  border-radius: 15px;
-  background-color: #232323;
-  padding: 15px 22px;
-  font-size: 14px;
-  font-weight: 900;
-  color: white;
-  cursor: pointer;
-}
-#nav-bar #part2 #part25 i {
-  padding-left: 5px;
-}
-#nav-bar #part2 #part26 span {
-  padding: 5px 8px;
-  border-radius: 50%;
-  background-color: #AD9D49;
-  font-size: 12px;
-  margin-left: 5px;
-  color: black;
-}
-#nav-bar #part2 #part27 {
-  background-color: #AD9D49;
-  color: black;
+
+#navlogo h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
-#one-main {
-  height: 100vh;
-  background-color: #121212;
-  padding: 0 15px;
+#navbuttons {
   display: flex;
-  justify-content: center;
+  gap: 10px;
+}
+#navbuttons .navbtn {
+  background-color: #212121;
+  padding: 15px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#navbuttons h3 {
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+#navbuttons #btn7 {
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #ad9d49;
+  color: black;
+}
+#navbuttons #btn5,
+#navbuttons #btn6 {
+  display: flex;
   align-items: center;
 }
-#one-main .o-main {
-  width: 50%;
-  height: 100%;
+#navbuttons #btn5 i {
+  font-size: 18px;
 }
-#one-main #part1 {
+#navbuttons #btn6 {
+  gap: 5px;
+}
+#navbuttons #btn6 span {
+  background-color: #ad9d49;
+  padding: 1px 5px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: black;
+}
+#navbuttons #btn8 {
+  display: none;
+}
+#navbuttons #btn8 i {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+#imagetext {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 10px 20px;
+  gap: 15px;
+}
+#imagetext #img {
+  height: 100%;
+  width: 50%;
   border-radius: 15px;
   overflow: hidden;
 }
-#one-main #part1 #part1 img {
+#imagetext #img img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#imagetext #text {
+  height: 100%;
+  width: 50%;
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  padding: 64px;
+  border-radius: 15px;
+}
+#imagetext #text #text1 h3 {
+  font-size: 14px;
+}
+#imagetext #text #text2 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#imagetext #text #text2 h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1.25;
+  letter-spacing: 5px;
+}
+#imagetext #text #text2 p {
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.6);
+}
+#imagetext #text #text2 #btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#imagetext #text #text2 #btn span {
+  border: 1px solid rgba(255, 255, 255, 0.625);
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 100;
+  padding: 2px 6px;
+}
+#imagetext #text #text2 #btn h3 {
+  font-size: 14px;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-between;
+}
+#stats .stst {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#stats .stst h3 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.625);
+}
+#stats .stst h1 {
+  font-size: 64px;
+}
+
+#physio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#physio .phy {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  gap: 15px;
+}
+#physio #part11 {
+  width: 50%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  justify-content: space-between;
+  background-color: #212121;
+}
+#physio #part11 h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+#physio #part11 h1 {
+  font-size: 46px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#physio #part11 #text2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#physio #part11 #text2 div {
+  display: flex;
+  gap: 60px;
+}
+#physio #part11 p {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.625);
+  line-height: 1.5;
+}
+#physio #part12 {
+  width: 50%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+#physio #part12 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#physio #part21 {
+  width: 50%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+#physio #part21 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#ourteam #hding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 50px;
+}
+#ourteam #hding h2 {
+  font-size: 46px;
+}
+#ourteam #hding #btn {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#ourteam #hding #btn span {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 6px;
+}
+#ourteam #hding #btn span i {
+  font-size: 22px;
+}
+#ourteam #hding #btn h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+#ourteam #cont {
+  display: flex;
+  flex-direction: column;
+}
+#ourteam div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+#ourteam div .imgbox {
+  width: 32%;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+#ourteam div .imgbox img {
+  width: 100%;
+}
+#ourteam div .imgbox #icns {
+  position: absolute;
+  top: 10%;
+  right: 7.5%;
+}
+#ourteam div .imgbox #icns div {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+#ourteam div .imgbox #name {
+  position: absolute;
+  bottom: 5%;
+  width: 95%;
+  padding: 22.5px 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  border-radius: 10px;
+}
+#ourteam div .imgbox #name h2 {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+#ourteam div .imgbox #name h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+#ourteam #imgtext {
+  width: 100%;
+  display: flex;
+  padding: 0 15px;
+}
+#ourteam #imgtext #img {
+  width: 50%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+#ourteam #imgtext #img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#ourteam #imgtext #text {
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  align-items: start;
+  justify-content: space-between;
+  padding: 60px;
+  width: 50%;
+  text-transform: uppercase;
+}
+#ourteam #imgtext #text #one {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 3px;
+}
+#ourteam #imgtext #text #one h3 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.625);
+}
+#ourteam #imgtext #text #one h2 {
+  font-size: 46px;
+}
+#ourteam #imgtext #text #btns {
+  display: flex;
+  align-items: center;
+}
+#ourteam #imgtext #text #btns span {
+  border: 1px solid rgba(255, 255, 255, 0.536);
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 3px 6px;
+}
+#ourteam #imgtext #text #btns h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+#cntc {
+  background-color: #ad9d49;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 55px 80px;
+  letter-spacing: 3px;
+  align-items: end;
+  border-radius: 15px;
+  margin: 15px;
+}
+#cntc #one h3 {
+  color: black;
+  font-size: 14px;
+}
+#cntc #one h2 {
+  font-size: 72px;
+  color: black;
+  width: 70%;
+  line-height: 1.15;
+}
+#cntc #touch {
+  background-color: #121212;
+  display: flex;
+  width: 190px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 8px;
+  letter-spacing: normal;
+}
+#cntc #touch h3 {
+  display: inline-block;
+  font-size: 14px;
+}
+#cntc #touch i {
+  font-size: 22px;
+  font-weight: 100;
+}
+
+#footer {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  padding: 0 15px;
+}
+#footer #p1 {
+  width: 20%;
+  background-color: #212121;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+#footer #p1 h2 {
+  font-size: 18px;
+}
+#footer #p1 #icns {
+  display: flex;
+  gap: 10px;
+}
+#footer #p1 #icns div {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+#footer #p2 {
+  width: 80%;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#footer #p2 div {
+  display: flex;
+  background-color: #212121;
+  border-radius: 15px;
+}
+#footer #p2 div .foot {
+  width: 33.33%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  gap: 25px;
+}
+#footer #p2 div .foot h2 {
+  font-size: 18px;
+}
+#footer #p2 div .foot h3 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.579);
+}
+#footer #p2 div .foot #bbtn {
+  background-color: #ad9d49;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 18px;
+  border-radius: 10px;
+}
+#footer #p2 div .foot #bbtn h3 {
+  color: black;
+}
+#footer #p2 #ending {
+  display: flex;
+  background-color: #212121;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+#footer #p2 #ending h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+#footer #p2 #ending h3 span {
+  text-decoration: underline;
+}
+#footer #p2 #ending #btnn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#footer #p2 #ending #btnn span {
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.558);
+  padding: 3px 6px;
+}
+#footer #p2 #ending #btnn span a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 15px 17px 35px;
+    text-transform: uppercase;
+  }
+  #navlogo h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  #navbuttons {
+    display: flex;
+    gap: 10px;
+  }
+  #navbuttons .navbtn {
+    background-color: #212121;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  #navbuttons h3 {
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  #navbuttons #btn7 {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #ad9d49;
+    color: black;
+  }
+  #navbuttons #btn5,
+  #navbuttons #btn6 {
+    display: flex;
+    align-items: center;
+  }
+  #navbuttons #btn5 i {
+    font-size: 18px;
+  }
+  #navbuttons #btn6 {
+    gap: 5px;
+  }
+  #navbuttons #btn6 span {
+    background-color: #ad9d49;
+    padding: 1px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: black;
+  }
+  #navbuttons #btn8 {
+    display: none;
+  }
+  #navbuttons #btn8 i {
+    font-size: 18px;
+    font-weight: 200;
+  }
+  #navbuttons #btn1,
+  #navbuttons #btn2,
+  #navbuttons #btn3,
+  #navbuttons #btn4,
+  #navbuttons #btn5,
+  #navbuttons #btn7 {
+    display: none;
+  }
+  #navbuttons #btn8 {
+    display: initial;
+  }
+  #navbuttons #btn8 i {
+    font-size: 30px;
+  }
+  #imagetext {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 15px;
+  }
+  #imagetext #img {
+    height: 40%;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  #imagetext #img img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #imagetext #text {
+    height: 60%;
+    width: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 36px 24px 24px 24px;
+    border-radius: 15px;
+  }
+  #imagetext #text #text1 h3 {
+    font-size: 14px;
+  }
+  #imagetext #text #text2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #imagetext #text #text2 h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 3.5px;
+  }
+  #imagetext #text #text2 p {
+    font-size: 21px;
+    letter-spacing: 0.5px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  #imagetext #text #text2 #btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #imagetext #text #text2 #btn span {
+    border: 1px solid rgba(255, 255, 255, 0.625);
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 100;
+    padding: 2px 6px;
+  }
+  #imagetext #text #text2 #btn h3 {
+    font-size: 14px;
+  }
+  #stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #stats .stst {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  #stats .stst h3 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.625);
+  }
+  #stats .stst h1 {
+    font-size: 36px;
+  }
+  #physio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #physio .phy {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    gap: 15px;
+  }
+  #physio #part2 {
+    flex-direction: column;
+  }
+  #physio #part11 {
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    padding: 24px;
+    justify-content: space-between;
+    background-color: #212121;
+  }
+  #physio #part11 h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  #physio #part11 h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  #physio #part11 #text2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #physio #part11 #text2 div {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  #physio #part11 p {
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.625);
+    line-height: 1.5;
+  }
+  #physio #part12 {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  #physio #part12 img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #physio #part21 {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  #physio #part21 img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #ourteam #hding {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 24px 24px;
+  }
+  #ourteam #hding h2 {
+    font-size: 28px;
+  }
+  #ourteam #hding #btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    display: none;
+    align-items: center;
+  }
+  #ourteam #hding #btn span {
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 6px;
+  }
+  #ourteam #hding #btn span i {
+    font-size: 22px;
+    display: none;
+  }
+  #ourteam #hding #btn h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  #ourteam #cont {
+    display: flex;
+    flex-direction: column;
+  }
+  #ourteam div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 6px;
+  }
+  #ourteam div .imgbox {
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  #ourteam div .imgbox img {
+    width: 100%;
+  }
+  #ourteam div .imgbox #icns {
+    position: absolute;
+    top: 10%;
+    right: 7.5%;
+    display: flex;
+    flex-direction: row;
+  }
+  #ourteam div .imgbox #icns div {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+  }
+  #ourteam div .imgbox #name {
+    position: absolute;
+    bottom: 5%;
+    width: 95%;
+    margin: auto;
+    padding: 14px 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+    border-radius: 10px;
+  }
+  #ourteam div .imgbox #name h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  #ourteam div .imgbox #name h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  #ourteam #imgtext {
+    width: 100%;
+    display: flex;
+    padding: 0 15px;
+  }
+  #ourteam #imgtext #img {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  #ourteam #imgtext #img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #ourteam #imgtext #text {
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    align-items: start;
+    justify-content: space-between;
+    padding: 24px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  #ourteam #imgtext #text #one {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 3px;
+  }
+  #ourteam #imgtext #text #one h3 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.625);
+  }
+  #ourteam #imgtext #text #one h2 {
+    font-size: 32px;
+  }
+  #ourteam #imgtext #text #btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #ourteam #imgtext #text #btns span {
+    border: 1px solid rgba(255, 255, 255, 0.536);
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 3px 6px;
+  }
+  #ourteam #imgtext #text #btns h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  #cntc {
+    background-color: #ad9d49;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 24px 24px;
+    letter-spacing: 3px;
+    align-items: start;
+    border-radius: 15px;
+    margin: 15px;
+    gap: 30px;
+  }
+  #cntc #one h3 {
+    color: black;
+    font-size: 14px;
+  }
+  #cntc #one h2 {
+    font-size: 32px;
+    color: black;
+    width: 100%;
+    line-height: 1.15;
+  }
+  #cntc #touch {
+    background-color: #121212;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    letter-spacing: normal;
+  }
+  #cntc #touch h3 {
+    display: inline-block;
+    font-size: 14px;
+  }
+  #cntc #touch i {
+    font-size: 22px;
+    font-weight: 100;
+  }
+  #footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+  }
+  #footer #p1 {
+    width: 100%;
+    background-color: #212121;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    gap: 40px;
+  }
+  #footer #p1 h2 {
+    font-size: 18px;
+  }
+  #footer #p1 #icns {
+    display: flex;
+    gap: 10px;
+  }
+  #footer #p1 #icns div {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+  }
+  #footer #p2 {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #footer #p2 div {
+    display: flex;
+    flex-direction: column;
+    background-color: #212121;
+    border-radius: 15px;
+  }
+  #footer #p2 div .foot {
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    gap: 25px;
+  }
+  #footer #p2 div .foot h2 {
+    font-size: 18px;
+  }
+  #footer #p2 div .foot h3 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.579);
+  }
+  #footer #p2 div .foot #bbtn {
+    background-color: #ad9d49;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 15px 18px;
+    border-radius: 10px;
+  }
+  #footer #p2 div .foot #bbtn h3 {
+    color: black;
+  }
+  #footer #p2 #ending {
+    display: flex;
+    background-color: #212121;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    gap: 20px;
+  }
+  #footer #p2 #ending h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-align: center;
+  }
+  #footer #p2 #ending h3 span {
+    text-decoration: underline;
+  }
+  #footer #p2 #ending #btnn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  #footer #p2 #ending #btnn span {
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.558);
+    padding: 3px 6px;
+  }
+  #footer #p2 #ending #btnn span a {
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=style.css.map */
