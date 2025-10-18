@@ -92,26 +92,22 @@ section {
 }
 
 #imagetext {
-  height: 100vh;
   width: 100%;
   display: flex;
   padding: 10px 20px;
   gap: 15px;
 }
 #imagetext #img {
-  height: 100%;
   width: 50%;
   border-radius: 15px;
   overflow: hidden;
 }
 #imagetext #img img {
-  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 #imagetext #text {
-  height: 100%;
   width: 50%;
   background-color: #212121;
   display: flex;

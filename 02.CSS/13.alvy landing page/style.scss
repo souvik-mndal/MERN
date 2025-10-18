@@ -99,25 +99,25 @@ section {
 }
 
 #imagetext {
-  height: 100vh;
+//   height: 100vh;
   width: 100%;
   display: flex;
   padding: 10px 20px;
   gap: 15px;
   #img {
-    height: 100%;
+    // height: 100%;
     width: 50%;
     // border: 1px solid white;
     border-radius: 15px;
     overflow: hidden;
     img {
-      height: 100%;
+    //   height: 100%;
       width: 100%;
       object-fit: cover;
     }
   }
   #text {
-    height: 100%;
+    // height: 100%;
     width: 50%;
     background-color: #212121;
     @include flex();
@@ -126,8 +126,8 @@ section {
     justify-content: space-between;
     padding: 64px;
     border-radius: 15px;
+    // border: 1px solid white;
     #text1 {
-      // border: 1px solid white;
       h3 {
         font-size: 14px;
       }
