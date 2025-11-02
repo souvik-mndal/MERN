@@ -2,6 +2,7 @@ let cnt = 0;
 let flag = true;
 while( flag ){
     let val = prompt("gimme words : ")
+    val= val.toLowerCase()
     if( val === "stop" ){
         console.log(`we have got total of yes ${cnt} times`);
         flag = false;
