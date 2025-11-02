@@ -1,105 +1,106 @@
-let btns = document.querySelectorAll("#buttons div");
-let showing = document.querySelector("#showdata");
-let equal = document.querySelector("#equal");
-let ce = document.querySelector("#ce");
+let btns = document.querySelectorAll("button")
+let disp = document.querySelector(".display")
 
-let isRad = true; // default mode: Radians
-const radBtn = document.querySelector("#buttons div:nth-child(1)");
-const degBtn = document.querySelector("#buttons div:nth-child(2)");
-
-radBtn.addEventListener("click", () => {
-    isRad = true;
-    radBtn.classList.add("active-mode");
-    degBtn.classList.remove("active-mode");
-});
-
-degBtn.addEventListener("click", () => {
-    isRad = false;
-    degBtn.classList.add("active-mode");
-    radBtn.classList.remove("active-mode");
-});
-
-// Helper function: factorial
-function factorial(n) {
-    if (n < 0) return NaN;
-    if (n === 0 || n === 1) return 1;
-    let res = 1;
-    for (let i = 2; i <= n; i++) res *= i;
-    return res;
-}
-
-// Toggle between Rad and Deg
-document.querySelectorAll("#buttons div")[0].addEventListener("click", () => {
-    isRad = true;
-    alert("Switched to Radians mode");
-});
-document.querySelectorAll("#buttons div")[1].addEventListener("click", () => {
-    isRad = false;
-    alert("Switched to Degrees mode");
-});
-
-// Clear screen
-ce.addEventListener("click", () => {
-    showing.innerText = "";
-});
-
-// Evaluate
-equal.addEventListener("click", () => {
-    try {
-        let als = showing.innerText
-            .replaceAll("÷", "/")
-            .replaceAll("x", "*")
-            .replaceAll("%", "/100")
-            .replaceAll("√", "Math.sqrt")
-            .replaceAll("log", "Math.log10")
-            .replaceAll("ln", "Math.log")
-            .replaceAll("power", "**")
-            .replaceAll("π", "Math.PI")
-            .replaceAll("e", "Math.E")
-            .replaceAll("EXP", "*10**");
-
-        // Handle trigonometric functions (depending on mode)
-        als = als
-            .replaceAll("sin", isRad ? "Math.sin" : "(x=>Math.sin(x*Math.PI/180))")
-            .replaceAll("cos", isRad ? "Math.cos" : "(x=>Math.cos(x*Math.PI/180))")
-            .replaceAll("tan", isRad ? "Math.tan" : "(x=>Math.tan(x*Math.PI/180))");
-
-        // Handle factorial
-        if (als.includes("!")) {
-            als = als.replace(/(\d+)!/g, (match, num) => factorial(parseInt(num)));
+btns.forEach((vals)=>{
+    vals.addEventListener('click',(e)=>{
+        let sym = e.target.innerText
+        if( sym === "="){
+            let ans = disp.innerText.replaceAll("÷","/")
+                                    .replaceAll("×","*")
+                                    .replaceAll("−","-")
+                                    .replaceAll("sinh(","Math.sinh(")
+                                    .replaceAll("cosh(","Math.cosh(")
+                                    .replaceAll("tanh(","Math.tanh(")
+                                    .replaceAll("sin(","Math.sin(")
+                                    .replaceAll("cos(","Math.cos(")
+                                    .replaceAll("tan(","Math.tan(")
+                                    .replaceAll("ln(","Math.log(")
+                                    .replaceAll("log₁₀(","Math.log10(")
+                                    .replaceAll("e","Math.E")
+                                    .replaceAll("π","Math.PI")
+                                    .replaceAll("EE","*10**")
+                                    .replaceAll("^","**")
+                                    .replaceAll("e^","Math.E**")
+                                    console.log(ans);
+            ans = eval(ans)
+            // console.log(ans);
+            disp.innerText = ans
         }
-
-        // Handle inverse (1/x)
-        if (als.includes("inv")) {
-            als = als.replace(/inv\(([^)]+)\)/g, "(1/($1))");
+        else if( sym === "AC" ){
+            disp.innerText = "0"
         }
-
-        let result = eval(als);
-        showing.innerText = result;
-    } catch (err) {
-        showing.innerText = "Error";
-        console.error(err);
-    }
-});
-
-// Button input
-btns.forEach((val) => {
-    val.addEventListener("click", (e) => {
-        const text = e.target.innerText;
-
-        if (text === "=" || text === "AC" || text === "Rad" || text === "Deg") return;
-
-        if (text === "√" || text === "log" || text === "ln" || text === "tan" || text === "cos" || text === "sin" || text === "inv") {
-            showing.innerText += text + "(";
-        } 
-        else if (text === "x!") {
-            showing.innerText += "!";
-        } 
-        else if (text === "x^y") {
-            showing.innerText += "power";
-        } 
-        else {
-            showing.innerText += text;
+        else if( sym === "sin" || sym === "cos" || sym === "tan" || sym === "tanh" || sym === "sinh" || sym === "cosh" || sym === "ln" || sym === "log₁₀"){
+            if( disp.innerText === "0" ){
+                disp.innerText = e.target.innerText + "("
+            }
+            else{
+                disp.innerText = disp.innerText + e.target.innerText + "("
+            }
         }
-    });
-});
+        else if( sym === "e" || sym === "π" || sym === "EE"){
+            if( disp.innerText === "0" ){
+                disp.innerText = e.target.innerText
+            }
+            else{
+                disp.innerText = disp.innerText + e.target.innerText
+            }
+        }
+        else if( sym === "10ˣ"){
+            if( disp.innerText === "0" ){
+                disp.innerText = "10^"
+            }
+            else{
+                disp.innerText = disp.innerText + "10^"
+            }
+        }
+        else if( sym === "eˣ"){
+            if( disp.innerText === "0" ){
+                disp.innerText = "e^"
+            }
+            else{
+                disp.innerText = disp.innerText + "e^"
+            }
+        }
+        else if( sym === "x²"){
+            if( disp.innerText === "0" ){
+                disp.innerText = "^2"
+            }
+            else{
+                disp.innerText = disp.innerText + "^2"
+            }
+        }
+        else if( sym === "x³"){
+            if( disp.innerText === "0" ){
+                disp.innerText = "^3"
+            }
+            else{
+                disp.innerText = disp.innerText + "^3"
+            }
+        }
+        else if( sym === "xʸ"){
+            if( disp.innerText === "0" ){
+                disp.innerText = "^"
+            }
+            else{
+                disp.innerText = disp.innerText + "^"
+            }
+        }
+        else if( sym === "²√x"){
+            if( disp.innerText === "0" ){
+                disp.innerText = "^"
+            }
+            else{
+                disp.innerText = disp.innerText + "^"
+            }
+        }
+        else{
+            if( disp.innerText === "0" ){
+                disp.innerText = e.target.innerText
+            }
+            else{
+                disp.innerText = disp.innerText + e.target.innerText
+            }    
+        }
+        // console.log(e.target.innerText);
+    })
+})
