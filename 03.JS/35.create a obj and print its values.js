@@ -4,6 +4,10 @@ let person = {
     "city" : "Kolkata"
 }
 
-for( let obj in person ){
-    console.log(person[obj]);
+// for( let obj in person ){
+//     console.log(person[obj]);
+// }
+
+for ( let val of Object.values(person)){
+    console.log(val);
 }
