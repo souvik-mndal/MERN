@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  color: white;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#main #inc {
+  font-size: 26px;
+  border: 1px solid white;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#main #dec {
+  font-size: 26px;
+  border: 1px solid white;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#main #inc:active {
+  scale: 0.95;
+}
+#main #dec:active {
+  scale: 0.95;
+}
+#main h2 {
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */
