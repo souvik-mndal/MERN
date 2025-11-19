@@ -32,3 +32,6 @@ html, body {
 #btn:active{
     scale: 0.95;
 }
+h3{
+    white-space: nowrap;
+}

@@ -34,6 +34,7 @@ btn.addEventListener("click",()=>{
     newData.style.left = x+"%"
     newData.style.right = y+"%"
     
+    
     main.appendChild(newData)
     console.log(color);
 })
