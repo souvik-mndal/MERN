@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#main {
+    height: 100%;
+    width: 100%;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+#btn{
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+#btn:active{
+    scale: 0.95;
+}
