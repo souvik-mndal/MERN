@@ -3,5 +3,5 @@
 
     range.addEventListener("input",(e)=>{
         e.preventDefault()
-        show.innerText = e.target.value
+        show.innerText = e.target.value+
     })
