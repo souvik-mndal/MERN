@@ -1,0 +1,170 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #wrapper {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        #mainDiv {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        #show{
+            position: relative;
+        }
+
+        #show i{
+            position: absolute;
+            top: 50%;
+            right: .5%;
+            transform: translate(-50%,-50%);
+            font-size: 20px;
+        }
+
+        #showPass {
+            background: #f7f7f7;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 18px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            word-break: break-all;
+            min-height: 60px;
+            display: flex;
+            justify-content: start;
+            margin-left: 0px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
+        }
+
+        #showPass h3{
+            color: #999;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: normal;
+        }
+
+        #slider{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: red; */
+            margin-bottom: 20px;
+        }
+
+        #range {
+            width: 87.5%;
+            height: 8px;
+            border-radius: 5px;
+            background: #e0e0e0;
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        #range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #range::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #inputValueShow {
+            font-size: 22px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        #mainDiv > input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #667eea;
+            margin-right: 12px;
+        }
+
+        #mainDiv .options h3 {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 500;
+            color: #555;
+            margin-left: 10px;
+            user-select: none;
+        }
+
+        .options{
+            display: flex;
+            align-items: center;
+        }
+
+        #generate {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        #generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        #generate:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 480px) {
+            #mainDiv {
+                padding: 30px 25px;
+            }
+
+            #showPass {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            #mainDiv > h3 {
+                font-size: 14px;
+            }
+        }

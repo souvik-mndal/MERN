@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="mainDiv">
+            <div id="show">
+                <div id="showPass"><h3>Your password will appear here</h3></div>
+                <i class="ri-file-copy-line" id="copy"></i>
+            </div>
+
+            <div id="slider">
+                <input type="range" id="range" min="8" max="24" value="16">
+                <h3 id="inputValueShow">16</h3>
+            </div>
+            
+            <div class="options">
+                <input type="checkbox" id="capitalLetters">
+                <h3>Capital Letters(eg. A,B,C ...)</h3>
+            </div>
+            <br>
+            <div class="options">
+                <input type="checkbox" id="smallLetters">
+                <h3>Small Letters(eg. a,b,c ...)</h3>
+            </div>
+            <br>
+            <div class="options">
+                <input type="checkbox" id="digits">
+                <h3>Digits(eg. 0,1,2 ...)</h3>
+            </div>
+            <br>
+            <div class="options">
+                <input type="checkbox" id="symbols">
+                <h3>Symbols(eg. @,#,$ ...)</h3>
+            </div>
+            <br>
+            <button id="generate">Generate</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
