@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, -apple-system;
+}
+
+html, body {
+    height: 100%;
+    background: #f4f4f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #18181b;
+}
+
+/* Layout */
+#wrapper {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+/* Status */
+#result {
+    font-size: 24px;
+    font-weight: 500;
+    color: #52525b;
+}
+
+/* Board */
+#main {
+    width: 440px;
+    height: 440px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 12px;
+    background: #e4e4e7;
+    border-radius: 20px;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Cell */
+.box {
+    background: #fafafa;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 600;
+    cursor: pointer;
+    /* transition: background 0.15s ease, transform 0.1s ease; */
+}
+
+/* Hover */
+.box:hover {
+    background: #f1f1f3;
+}
+
+
+
+/* X & O */
+.box.x {
+    color: #3f3f46; /* charcoal */
+}
+
+.box.o {
+    color: #71717a; /* soft gray */
+}
+
+/* Restart */
+#restart {
+    margin-top: 8px;
+    padding: 10px 28px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 999px;
+    border: none;
+    background: #18181b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#restart:hover {
+    background: #27272a;
+}
