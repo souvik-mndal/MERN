@@ -40,6 +40,7 @@ box.forEach((b)=>{
 
 restart.addEventListener("click",(e)=>{
     drawCount = 0
+    cursor = "X"
     box.forEach((b)=>{
         b.innerText = ""
     })
