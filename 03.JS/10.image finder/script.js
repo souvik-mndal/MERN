@@ -8,34 +8,41 @@ let page;
 async function api(name,page){
     let response = await fetch(`https://api.unsplash.com/search/photos?query=${name}&client_id=${ACCESS_TOKEN}&page=${page}`)
     let result = await response.json()
+    console.log(result);
     let desc;
-    result.results.forEach((items)=>{
-        if(items.description === null ){
-            desc = items.alt_description
-        }
-        else{
-            desc = items.description
-        }
-        console.log(items);
-        let div = document.createElement("div")
-        div.setAttribute("class","insta-card")
-        div.innerHTML = `
-            <div class="card-header">
-            <img src=${items.user.profile_image.large} class="profile-pic" />
-            <span class="username">${items.user.username}</span>
-            </div>
-
-            <div class="card-image">
-            <img src=${items.urls.regular} />
-            </div>
-
-            <div class="card-desc">
-            <span class="username">${items.user.name}</span>
-            ${desc}
-            </div>
-        `
-        main.append(div)
-    })
+    // console.log(result.results);
+    if( result.results.length == 0 ){
+        main.innerHTML = `<h2>No image found</h2>`
+    }
+    else{
+        result.results.forEach((items)=>{
+            if(items.description === null ){
+                desc = items.alt_description
+            }
+            else{
+                desc = items.description
+            }
+            console.log(items);
+            let div = document.createElement("div")
+            div.setAttribute("class","insta-card")
+            div.innerHTML = `
+                <div class="card-header">
+                <img src=${items.user.profile_image.large} class="profile-pic" />
+                <span class="username">${items.user.username}</span>
+                </div>
+    
+                <div class="card-image">
+                <img src=${items.urls.regular} />
+                </div>
+    
+                <div class="card-desc">
+                <span class="username">${items.user.name}</span>
+                ${desc}
+                </div>
+            `
+            main.append(div)
+        })
+    }
 }
 let searching;
 search.addEventListener("click",(e)=>{
