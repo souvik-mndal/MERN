@@ -7,11 +7,18 @@ async function api(name){
     let result = await response.json()
     console.log(result);
     let bioo ;
+    let nname ;
     if( result.bio === null ){
         bioo = ""
     }
     else{
         bioo = result.bio;
+    }
+    if( result.name === null ){
+        nname = ""
+    }
+    else{
+        nname = result.name;
     }
     if( result.status === "404" ){
         main.innerHTML = `User not found`
@@ -22,7 +29,7 @@ async function api(name){
                     <div id="img">
                         <img src=${result.avatar_url} alt="profile_photo">
                     </div>
-                    <h2 id="name">${result.name}</h2>
+                    <h2 id="name">${nname}</h2>
                     <h3 id="bio">${bioo}</h3>
                 </div>
                 <div id="numbers">
@@ -50,5 +57,6 @@ async function api(name){
 }
 
 search.addEventListener("click",(e)=>{
+    main.innerHTML = `<span class="loader"></span>`
     api(name.value)
 })
