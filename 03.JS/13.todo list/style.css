@@ -1,0 +1,149 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Card */
+#main {
+    background: #ffffff;
+    width: 420px;
+    min-height: 300px;
+    max-height: 500px;                 
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+#main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input */
+#task {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+#task:focus {
+    border-color: #667eea;
+}
+
+/* Add Button */
+#add {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #667eea;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#add:hover {
+    background: #5a6fdc;
+}
+
+/* Tasks Container (Scrollable) */
+#showTasks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    flex: 1;                      /* 👈 take remaining space */
+    overflow-y: auto;             /* 👈 enable scrolling */
+    padding-right: 6px;
+}
+
+/* Custom Scrollbar */
+#showTasks::-webkit-scrollbar {
+    width: 6px;
+}
+
+#showTasks::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#showTasks::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+#showTasks::-webkit-scrollbar-thumb:hover {
+    background: #5a6fdc;
+}
+
+/* Single Task */
+.singleTask {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: #f7f8ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Checkbox */
+.singleTask input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Task Text */
+.singleTask h2 {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Remove Button */
+.singleTask button {
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s ease;
+}
+
+.singleTask button:hover {
+    background: #e85a5a;
+}
+
+/* DO NOT CHANGE – used in JS */
+.line {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
