@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Title -->
+    <h1>Notes App</h1> 
+
+    <!-- Top Controls -->
+    <div class="controls">
+      <button id="new-note">+ New</button>
+
+      <div class="navigator">
+        <button id="leftA" class="arrow"><i class="ri-arrow-left-line"></i></button>
+        <div id="noteNum" class="note-number">0</div>
+        <button id="rightA" class="arrow"><i class="ri-arrow-right-line"></i></button>
+      </div>
+    </div>
+
+    <!-- Note Area -->
+     <div id="allNotes">
+        
+         <!-- <div class="note-box">
+           <div class="note-actions">
+             <button>Edit</button>
+             <button class="danger">Remove</button>
+           </div>
+     
+           <div class="note-content">
+             <div>sdfsd</div>
+             <textarea id="writeText"></textarea>
+           </div>
+         </div> -->
+     </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
