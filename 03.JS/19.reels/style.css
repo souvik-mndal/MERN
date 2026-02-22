@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reels{
+    height: 100vh;              /* important */
+    width: 35%;
+    overflow: auto;           /*🔥 enables scrolling*/
+    scroll-snap-type: y mandatory; /* 🔥 enables snapping */
+    padding: 15px;
+    /* border: 1px solid yellow; */
+}
+
+.reel-parent{
+    height: 92.5vh;
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    /* border: 1px solid white; */
+    overflow: hidden;
+    /* 🔥 snapping point */
+    scroll-snap-align: start;
+    margin-bottom: 25px;
+}
+#reels::-webkit-scrollbar{
+    display: none;
+}
+
+#reels{
+    scrollbar-width: none;
+}
+#cont{
+    height: 100%;
+    width: 100%;
+}
+#cont video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#desc{
+    min-height: 17.5%;
+    width: 100%;
+    /* background-color: #fff; */
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 20px 30px;
+}
+#detail{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 20px;
+}
+#detail h3{
+    font-size: 18px;
+}
+#detail button{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#desc p{
+    color: white;
+    font-size: 16px;
+    margin-top: 15px;
+}
+#stats{
+    position: absolute;
+    height: 40%;
+    width: 12.5%;
+    /* background-color: #fff; */
+    right: 2.5%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.stt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+.stt i{
+    font-size: 28px;
+}
+.stt h3{
+    font-size: 14px;
+}
+
+.red{
+    color: red;
+}
