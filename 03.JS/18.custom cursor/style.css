@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#crsr{
+    position: fixed;
+    height: 1.2vw;
+    width: 1.2vw;
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    transition: all linear 0.1s;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-family: sans-serif;
+}

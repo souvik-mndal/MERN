@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="crsr"></div>
+    <div id="main">
+        <h1>CUSTOM CURSOR</h1>
+    </div>
+    <script>
+        let crsr = document.querySelector("#crsr")
+        let body = document.querySelector("body")
+        body.addEventListener("mousemove",(e)=>{
+            // console.log(e);
+            crsr.style.top = `${e.y}px`
+            crsr.style.left = `${e.x}px`
+        })
+    </script>
+</body>
+</html>
