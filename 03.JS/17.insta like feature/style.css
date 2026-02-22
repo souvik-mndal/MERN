@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+body{
+  background:#000;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+}
+
+/* POST CARD */
+.post-card{
+  width:360px;
+  background:#000;
+  border:1px solid #262626;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+/* HEADER */
+.post-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 14px;
+}
+
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.profile-pic{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.username{
+  font-size:14px;
+  font-weight:600;
+}
+
+.more{
+  font-size:20px;
+  cursor:pointer;
+  color:#ccc;
+}
+
+/* POST IMAGE */
+.post-image{
+    border: 1px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-image i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 145px;
+    background: linear-gradient(to bottom right , rgb(238, 43, 43) , rgb(245, 2, 245));
+    background-clip: text;
+    color: transparent;
+    transform: translate(-50%,-50%) rotate(-45deg) scale(0);
+    transition: all linear .35s;
+}
+
+.post-image img{
+  width:100%;
+  display:block;
+}
+
+/* ACTIONS */
+.post-actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 14px;
+  /* background-color: #fff; */
+}
+
+.actions-left{
+  display:flex;
+  gap:18px;
+}
+
+/* Each action item */
+.action-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+}
+
+.icon{
+  font-size:22px;
+  transition:0.2s;
+}
+
+
+
+.count{
+  font-size:15px;
+  color:#e4e6eb;
+}
+
+/* bookmark spacing */
+.bookmark{
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* CAPTION */
+.caption{
+  padding:6px 14px 14px;
+  font-size:14px;
+  line-height:1.4;
+}
+
+.caption span{
+  font-weight:600;
+  margin-right:6px;
+}
+
+/* COMMENT BAR */
+.comment-bar{
+  border-top:1px solid #262626;
+  padding:10px 14px;
+  color:#9aa0a6;
+  font-size:14px;
+}
+#heart{
+    transition: all cubic-bezier(.65,1.07,.71,1.37) 0.3s;
+}
+
+.leftt{
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.rightt{
+    transform: translate(-50%,-50%) rotate(45deg);
+}
